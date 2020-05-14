@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="center-column">
+    <h1>Atualiza</h1>
+    <form method="POST" action=""> {% csrf_token %}
+        <div class="row">
+            <div class="col-md-4">
+                {{form.data_tarefa|as_crispy_field}}
+            </div>
+            <div class="col-md-6">
+                {{form.title|as_crispy_field}}
+            </div>
+            <div class="col-md-2">
+                {{form.complete|as_crispy_field}}
+            </div>
+        </div>
+
+        <a class="btn btn-primary btn-block" href="{% url 'index' %}">Cancela</a>
+        <input class="btn btn-success btn-block"  type="submit" value="Atualiza Tarefa">
+    </form>
+</div>
+{% endblock content %}

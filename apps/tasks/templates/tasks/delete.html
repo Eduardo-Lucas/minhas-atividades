@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="center-column">
+        <p class="text-center">Tem certeza que quer apagar {{item.data_tarefa|date:"d/m/Y"}}-{{item.title}}?</p>
+        <a class="btn btn-primary btn-block" href="{% url 'index' %}">Cancela</a>
+
+        <form method="POST" action=""> {% csrf_token %}
+            <input class="btn btn-danger" type="submit" name="Confirm">
+        </form>
+    </div>
+{% endblock content %}

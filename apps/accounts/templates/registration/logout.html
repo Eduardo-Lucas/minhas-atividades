@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Logout{% endblock %}
+
+{% block content %}
+
+<div class="container text-center">
+
+    <h2 class="text-danger">Sessão encerrada</h2>
+
+    <h3>Obrigado por utilizar nosso site.</h3>
+
+    <h4><a class="btn btn-outline-dark" href="{% url 'login' %}">Entrar novamente</a></h4>
+
+</div>
+
+{% endblock %}
