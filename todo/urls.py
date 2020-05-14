@@ -23,9 +23,9 @@ from apps.accounts.views import register_page, login_view, logout_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('register', register_page, name='register'),
-    path('login', login_view, name='login'),
-    path('logout', logout_view, name='logout'),
+    path('register/', register_page, name='register'),
+    path('login/', login_view, name='login'),
+    path('logout/', logout_view, name='logout'),
     path('', include('apps.tasks.urls')),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
