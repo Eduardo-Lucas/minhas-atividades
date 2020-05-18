@@ -10,6 +10,9 @@ django = "*"
 django-crispy-forms = "*"
 gunicorn = "*"
 whitenoise = "*"
+django-storages = "*"
+boto3 = "*"
+django-decouple = "*"
 
 [requires]
 python_version = "3.8"
